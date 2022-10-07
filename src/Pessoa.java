@@ -1,12 +1,17 @@
 import java.util.Date;
+import java.util.*;
+import java.text.*;
 import java.util.Scanner;
 
 public class Pessoa {
     private String name;
     private int phone;
     private String dtBorn;
-//    private Date dtRegister;
+
+    //    private Date dtRegister;
 //    private Date lastUpdate;
+
+//    private double nota = 0;
 
 //    public Pessoa(String name, int phone, String dtBorn) { //, Date dtRegister, Date lastUpdate) {
 //        this.name = name;
@@ -14,14 +19,16 @@ public class Pessoa {
 //        this.dtBorn = dtBorn;
 //        this.dtRegister = dtRegister;
 //        this.lastUpdate = lastUpdate;
-   //  }
-
+    //  }
     public Pessoa() {
 
     }
 
     public void criarPessoa() {
-        Date dtB = new Date();
+        Date dtR = new Date();
+        System.out.println("Data de Registro: " + dtR);
+
+        Pessoa p = new Pessoa();
         Scanner input = new Scanner(System.in);
         System.out.println("Informe o nome:");
         this.name = input.nextLine();
@@ -30,6 +37,22 @@ public class Pessoa {
         input.nextLine();
         System.out.println("Informe a data de nascimento:");
         this.dtBorn = input.nextLine();
+
+//        p.MenuAluno();
+
+//        System.out.println("Informe a nota (OBS: caso você não seja um aluno, informe 0):");
+//        this.nota = input.nextInt();
+//        input.nextLine();
+//
+//        if(getNota() == 0) {
+//            System.out.println("Não aluno");
+//        } else {
+//            if(getNota() != 0) {
+//                System.out.println("Aluno");
+//            }
+//        }
+
+
     }
 
     public void imprimePessoa() {
@@ -62,6 +85,7 @@ public class Pessoa {
         this.dtBorn = dtBorn;
     }
 
+
 //    public Date getDtRegister() {
 //        return dtRegister;
 //    }
@@ -76,5 +100,12 @@ public class Pessoa {
 //
 //    public void setLastUpdate(Date lastUpdate) {
 //        this.lastUpdate = lastUpdate;
+//    }
+//    public double getNota() {
+//        return nota;
+//    }
+//
+//    public void setNota(double nota) {
+//        this.nota = nota;
 //    }
 }
